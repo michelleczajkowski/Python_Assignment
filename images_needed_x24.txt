@@ -1,9 +1,8 @@
 
 judge (female, male)
-lawyer (female, male)
 chef (female, male) 
 nurse (female, male)
-doctor (female, male)
+surgeon (female, male)
 mayor (male, female)
 lecturer (male, female)
 farmer (male, female)
