@@ -1,0 +1,14 @@
+
+judge (female, male)
+lawyer (female, male)
+chef (female, male) 
+nurse (female, male)
+doctor (female, male)
+mayor (male, female)
+lecturer (male, female)
+farmer (male, female)
+teacher(of kids)(male, female)
+hairdresser (male, female)
+writer (male, female)
+artist (male, female)
+
