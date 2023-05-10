@@ -1,0 +1,3 @@
+word,correct_image,incorrect_image,gender_image
+boer,boer_man.jpg,boerin_vrouw.jpg,kapper_man.jpg
+kapster,kapster_vrouw.jpg,kapper_man.jpg,boerin_vrouw.jpg
