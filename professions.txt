@@ -1,9 +1,8 @@
 ; neutral
 rechter
-advocaat
 kok
 verpleegkundige
-arts
+chirug
 burgermeester
 hoogleraar
 boer
@@ -20,10 +19,9 @@ kunstenares
 
 ; English
 judge
-lawyer
 chef 
 nurse
-doctor
+surgeon
 mayor
 lecturer 
 farmer
