@@ -102,7 +102,7 @@ canvas.update()
 window.after(2000)
 canvas.delete("all")
 canvas.update()
-canvas.create_text(400, 300, text="Picture = Audio? click Y or N", fill='white', width=600, font=('Arial', 20), anchor=tk.CENTER)
+canvas.create_text(400, 300, text="Listen. Sentence = Word? click Y or N", fill='white', width=600, font=('Arial', 20), anchor=tk.CENTER)
 canvas.update()
 window.after(2000)
 canvas.delete("all")
@@ -132,6 +132,9 @@ for i in range(5):
 
     canvas.delete("all")
     canvas.update()
+    playsound(sound_path)
+
+
     canvas.create_text(400, 300, text=word, fill='white', font=('Arial', 50), anchor=tk.CENTER)
     canvas.update()
     window.after(1000)
@@ -149,9 +152,10 @@ for i in range(5):
     canvas.delete("all")
     canvas.update()
     
-    start_time = time.time() 
     
-    playsound(sound_path)
+    
+    
+    start_time = time.time() 
 
 
     
