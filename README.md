@@ -25,17 +25,17 @@ Key elements of the experiment:
 - Keys to press
 - Record the response & timing (here: when experiment is done, responses recorded in csv file, analysis will require combining)
 
-If you feel like it, you can include auditory (spoken) stimuli as well, so you can try to see if
-there is a difference in the reaction time effect between modalities.
-Once you have completed the experiment, and have written the results to CSV files, you can
-write a preprocessing and visualisation notebook. First, run a few “participants” (go through
-the experiment yourself 2-3 times, or distract your office- or housemates with it!) Then, load
-and merge the output files. Calculate some summary statistics, and verify that the results
-look sensible. Then, use a plotting package of your choice to visualise results. Make (at
-least) one diagnostic plot, with (relatively) raw data, as a check to see that the data actually
-looks sensible, and (at least) one aggregate plot, aimed at effectively visualising the
-outcome of the experiment with respect to its hypothesis. Finally, even though it may not
-make much sense for the amount of data, try out some simple statistics
+    If you feel like it, you can include auditory (spoken) stimuli as well, so you can try to see if
+    there is a difference in the reaction time effect between modalities.
+    Once you have completed the experiment, and have written the results to CSV files, you can
+    write a preprocessing and visualisation notebook. First, run a few “participants” (go through
+    the experiment yourself 2-3 times, or distract your office- or housemates with it!) Then, load
+    and merge the output files. Calculate some summary statistics, and verify that the results
+    look sensible. Then, use a plotting package of your choice to visualise results. Make (at
+    least) one diagnostic plot, with (relatively) raw data, as a check to see that the data actually
+    looks sensible, and (at least) one aggregate plot, aimed at effectively visualising the
+    outcome of the experiment with respect to its hypothesis. Finally, even though it may not
+    make much sense for the amount of data, try out some simple statistics
 
 Research Question: Certain professions are associated with certain genders. For example, when asked to think of a doctor, people my often think first of a man rather than a woman. For a nurse, the opposite might be true. These kinds of biases can be studied through reaction time experiments. For example, a participant is shown the word "doctor" and then a picture, and they have to react as quickly as possible to indicate if the picture matches the word. If they have unconscious biases, their reaction time may be slower or faster depending on whether the picture meets their expectations. This experiment aims to explore the following research questions: 
 1) Are biases apparent in L1?
