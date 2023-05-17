@@ -1,2 +1,0 @@
-Requirements
-pip install playsound==1.2.2 #newer versions don't work https://stackoverflow.com/questions/69065485/sound-file-will-not-play-using-playsound-module-python-error-259/76274111#76274111

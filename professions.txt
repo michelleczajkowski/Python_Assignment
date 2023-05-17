@@ -5,6 +5,7 @@ verpleegkundige
 chirug
 burgermeester
 hoogleraar
+;gendered
 boer
 boerin
 leraar
@@ -16,17 +17,4 @@ schrijvster
 kunstenaar
 kunstenares 
 
-
-; English
-judge
-chef 
-nurse
-surgeon
-mayor
-lecturer 
-farmer
-teacher
-hairdresser / barber
-writer
-artist
 

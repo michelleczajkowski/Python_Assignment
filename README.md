@@ -3,27 +3,27 @@ final assignment for imprs-python-2023
 
 Option 2: Picture verification task
 
-In a picture verification task, the participant is presented with a word for a given period of
-time, then with a break, and subsequently with a picture that either matches or does not
-match the presented word. Participants are asked to indicate whether or not this picture
-matches the given cue word. Typically, participants will respond faster to matching trials than
-to non-matching trials. We are going to build an experiment that can do this. You can use the
-stimuli you created for session 2a (images); but if you did not manage to create the stimuli,
-or do not like the result, all the stimuli are also in the repository of session 3.
-We have a set of image stimuli. We will make a demo that presents matching cue-target
-pairs and ask participants to respond. After making this experiment, you can add
-mismatching target pairs, and think of a way to properly balance and randomise these.
-(There is an example randomisation script in the GitHub repository.)
+    In a picture verification task, the participant is presented with a word for a given period of
+    time, then with a break, and subsequently with a picture that either matches or does not
+    match the presented word. Participants are asked to indicate whether or not this picture
+    matches the given cue word. Typically, participants will respond faster to matching trials than
+    to non-matching trials. We are going to build an experiment that can do this. You can use the
+    stimuli you created for session 2a (images); but if you did not manage to create the stimuli,
+    or do not like the result, all the stimuli are also in the repository of session 3.
+    We have a set of image stimuli. We will make a demo that presents matching cue-target
+    pairs and ask participants to respond. After making this experiment, you can add
+    mismatching target pairs, and think of a way to properly balance and randomise these.
+    (There is an example randomisation script in the GitHub repository.)
 
 Key elements of the experiment:
-- Read the csv with stimulus information
+- Read the csv with stimulus information (here: stimulus.csv and stimulus2.csv)
 - Instruction screen (optional)
-- Present a word
+- Present a word 
 - Fixation cross-screen
 - Present a visual stimulus
 - Clock
 - Keys to press
-- Record the response & timing
+- Record the response & timing (here: when experiment is done, responses recorded in csv file, analysis will require combining)
 
 If you feel like it, you can include auditory (spoken) stimuli as well, so you can try to see if
 there is a difference in the reaction time effect between modalities.
@@ -42,5 +42,5 @@ Research Question: Certain professions are associated with certain genders. For 
 2) Do biases exhibit in the same way in L2?
 
 All participants are speakers of Dutch and English, their L1 will be one of these languages, and their proficiency level in the other will be a minimum of B1. There will be a practice round with animals. 
-Steps:
-1) Create a list of jobs that are gender neutral in Dutch
+
+11 professions were chosen in Dutch (professions.txt). Two images for each were selected, man and woman (images subfolder). Six of the professions are non-gendered (e.g. kok). Five are gendered (e.g. leraar / lerares). In each iteration in the trial, one of the profession names is shown, followed by a choice of three images, selected randomly - the correct gender, the incorrect gender (if applicable) and the right gender but wrong profession. It is expected that there will be a bias in non-gendered jobs, e.g. kok will bias towards male, meaning that response time is quicker here. 
