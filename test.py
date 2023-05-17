@@ -1,13 +1,4 @@
 import tkinter as tk
-from PIL import Image, ImageTk
-import time
-import random
-import keyboard
-import pandas as pd
-import time
-import keyboard 
-import os
-from playsound import playsound
 
 # Create a blank window
 window = tk.Tk()
@@ -16,84 +7,44 @@ window.geometry("800x600")
 window.attributes("-topmost", True)
 canvas = tk.Canvas(window, width=800, height=600, bg='black')
 canvas.pack()
-
-
-# Set up the stimulus
-stimulus = pd.read_csv("stimulus.csv")
-# Create an empty DataFrame to store the results
-results_df = pd.DataFrame(columns=['type', 'trial', 'word', 'value_col', 'key', 'duration'])
-
-image_path2 = "images/crosshairs.jpg" 
-
-
-
-canvas.delete("all")
-canvas.create_text(400, 300, text="Round 2 - last round", fill='white', width=600, font=('Arial', 20), anchor=tk.CENTER)
-canvas.update()
-window.after(2000)
-canvas.delete("all")
-canvas.update()
-canvas.create_text(400, 300, text="Listen. Sentence = Word? click Y or N", fill='white', width=600, font=('Arial', 20), anchor=tk.CENTER)
-canvas.update()
-window.after(2000)
-canvas.delete("all")
-canvas.create_text(400, 300, text="Click as fast as you can! Ready?", fill='white', width=600, font=('Arial', 20), anchor=tk.CENTER)
+canvas.create_text(400, 300, text="Mini-Experiment\nRound 1 of 2", fill='white', width=600, font=('Arial', 30), anchor=tk.CENTER)
 canvas.update()
 window.after(2000)
 
+canvas.delete("all")
 
-# Set up the stimulus
-stimulus2 = pd.read_csv("stimulus2.csv")
-# Create an empty DataFrame to store the results
-results_df = pd.DataFrame(columns=['type', 'trial', 'word', 'value_col', 'key', 'duration'])
+# Create a label and entry field for the user to enter their name
+tk.Label(window, text="Enter your first name:").pack()
+name_entry = tk.Entry(window)
+name_entry.pack()
 
-image_path2 = "images/crosshairs.jpg" 
+# Create a label and entry field for the user to enter their first language
+tk.Label(window, text="First language:").pack()
+lang_entry = tk.Entry(window)
+lang_entry.pack()
 
-for i in range(5):
+# Create a label and entry field for the user to enter their gender
+tk.Label(window, text="Gender:").pack()
+gender_entry = tk.Entry(window)
+gender_entry.pack()
 
-    # Select a random row from the data set
-    row = stimulus2.sample()
-    # Select a random word from the 'word' column
-    word = row.iloc[0, 0]
-    # select the value from the other rows randomly 
-    value_col = random.choice([1, 2, 3])
-    sound_path = f"sounds/{row.iloc[0, value_col]}"
+# Function to set the variables and exit the mainloop
+def set_variables(event):
+    global name, lang, gend
+    name = name_entry.get()
+    lang = lang_entry.get()
+    gend = gender_entry.get()
+    window.quit()
 
+# Bind the <Return> event to the entry widgets
+name_entry.bind("<Return>", set_variables)
+lang_entry.bind("<Return>", set_variables)
+gender_entry.bind("<Return>", set_variables)
 
+# Start the mainloop
+window.mainloop()
 
-    canvas.delete("all")
-    canvas.update()
-
-    playsound(sound_path)
-
-
-    canvas.create_text(400, 300, text=word, fill='white', font=('Arial', 50), anchor=tk.CENTER)
-    canvas.update()
-           
-    start_time = time.time() 
-
-
-    
-    # Function to close the window when a key is pressed
-    def key_press(event):
-        global key, end_time
-        key = event.char
-        end_time = time.time()
-        window.quit()
-
-    # Bind the key press event to the function
-    window.bind("<Key>", key_press)
-
-    # Show the window
-    window.mainloop()
-    
-
-
-
-    # Calculate the duration
-    duration = end_time - start_time
-    # Append a row of data to the DataFrame
-    results_df = pd.concat([results_df, pd.DataFrame({'type': "sound", 'trial': i+1, 'word': word, 'value_col': value_col, 'key': key, 'duration': duration}, index=[0])])
-
-# Print the DataFrame
-print(results_df)
+# Print the variables
+print("Name:", name)
+print("Language:", lang)
+print("Gender:", gend)

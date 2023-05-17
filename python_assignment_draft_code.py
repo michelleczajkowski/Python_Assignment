@@ -62,11 +62,10 @@ window.geometry("800x600")
 window.attributes("-topmost", True)
 window.grab_set()
 
-
 canvas = tk.Canvas(window, width=800, height=600, bg='black')
 canvas.pack()
 
-
+window.focus_force()
 canvas.create_text(400, 300, text="Mini-Experiment\nRound 1 of 2", fill='white', width=600, font=('Arial', 30), anchor=tk.CENTER)
 canvas.update()
 window.after(2000)
@@ -140,10 +139,9 @@ for i in range(2):
 
     # Bind the key press event to the function
     window.bind("<Key>", key_press)
-
+    window.focus_force()
     # Show the window
     window.mainloop()
-
 
 
     # Calculate the duration
