@@ -54,14 +54,18 @@ window.mainloop()
 
 
 
+
 # Create a blank window
 window = tk.Tk()
 window.title("Stimulus")
 window.geometry("800x600")
 window.attributes("-topmost", True)
+window.grab_set()
+
+
 canvas = tk.Canvas(window, width=800, height=600, bg='black')
 canvas.pack()
-window.focus_set()
+
 
 canvas.create_text(400, 300, text="Mini-Experiment\nRound 1 of 2", fill='white', width=600, font=('Arial', 30), anchor=tk.CENTER)
 canvas.update()
@@ -97,6 +101,8 @@ for i in range(2):
     image_path = f"images/{row.iloc[0, value_col]}"
 
     canvas.delete("all")
+    
+    
     canvas.update()
     canvas.create_text(400, 300, text=word, fill='white', font=('Arial', 30), anchor=tk.CENTER)
     canvas.update()
