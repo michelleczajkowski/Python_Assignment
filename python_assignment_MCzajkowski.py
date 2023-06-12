@@ -27,7 +27,7 @@ def save_data():
     window.destroy()  
 
 # user's name
-name_label = tk.Label(window, text="Welcome to the dutch job names mini-experiment\nFirst we need some information.\nPlease enter:\nYour first name (first four letters):", fg="white", bg="black", font=("Arial", 16))
+name_label = tk.Label(window, text="Welcome to the Dutch job names mini-experiment\nFirst we need some information.\nPlease enter:\nYour first name (first four letters):", fg="white", bg="black", font=("Arial", 16))
 name_field = tk.Entry(window, font=("Arial", 16))
 
 # language choice
